@@ -3,7 +3,7 @@ package P_11_03_2;
 public class ChekFunction {
     private String [] strings = new String[7] ;
 
-        boolean Chek(String var){
+        boolean Chek(String var){// функция проверки корректности введённого поколения
             strings[0] = "1";
             strings[1] = "1 rest";
             strings[2] = "2";
@@ -17,4 +17,13 @@ public class ChekFunction {
         }
         return false;
     }
+        boolean ChekConfirmation(String var){//функция проверки корректности
+            if(var.equals("yes") | var.equals("no")){
+            return true;
+            } else{
+                System.out.print("invalid expression, please try again << ");
+                Variable.consumerAnswer = Variable.consAns.nextLine();
+                ChekConfirmation(Variable.consumerAnswer);//рекурсия
+            } return true;
+        }
 }
