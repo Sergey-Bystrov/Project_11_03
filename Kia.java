@@ -1,33 +1,16 @@
 package P_11_03_2;
 
-import java.util.Scanner;
-
 public class Kia {
-    static String generation;
-    static String x ="yes";
-    static String y = "yes";
-    static String s;
-    static Scanner S = new Scanner(System.in);
-    static Scanner gen = new Scanner(System.in);
-    static Scanner Y = new Scanner(System.in);
-    static String [] strings = new String[7] ;
 
     public static void main(String args[]) {
-        //boolean b = true;
         Processing process = new ConsoleApl();
         ChekFunction ChekStatemen = new ChekFunction();
-        strings[0] = "1";
-        strings[1] = "1 rest";
-        strings[2] = "2";
-        strings[3] = "3";
-        strings[4] = "3 rest";
-        strings[5] = "4";
-        strings[6] = "4 rest";
-        while (y.equals(x)) { // подтверждение yes/no
+
+        while (Variable.consumerAnswer.equals(Variable.yes)) { // подтверждение yes/no
                 process.start();
-                boolean st = ChekStatemen.Chek(generation);
-                if(st){
-                    switch (generation) {
+                boolean answer = ChekStatemen.Chek(Variable.generation);
+                if(answer){
+                    switch (Variable.generation) {
                         case ("1"): {
                             Methods car1 = new KiaCerato1(2003, 2008);
                             car1.getYear();
@@ -90,13 +73,13 @@ public class Kia {
 
                 }else {
                     process.additionalConfirmation();
-                    switch (s){
+                    switch (Variable.statement){
                         case("yes"):{
-                            st = true;
+                            answer = true;
                         } break;
 
                         case("no"):{
-                            y = "no";
+                            Variable.consumerAnswer = "no";
                         }
                     }
                 }
