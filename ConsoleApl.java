@@ -1,23 +1,7 @@
 package P_11_03_2;
 
-import java.util.Scanner;
-
 public class ConsoleApl implements Processing{
-    /*public ConsoleApl(String generation, Scanner gen, String y, Scanner y1, String s) {
-        this.generation = generation;
-        this.gen = gen;
-        this.y = y;
-        Y = y1;
-        this.s = s;
-    }
-
-    public String generation;
-    public Scanner gen = new Scanner(System.in);
-    public String y = "yes";
-    public Scanner Y = new Scanner(System.in);
-    public String s;
-    static Scanner S = new Scanner(System.in);*/
-
+   
     public void start(){
 
         System.out.print("Enter the generation of your Kia Cerato << ");// start
