@@ -18,7 +18,7 @@ public class ChekFunction {
         return false;
     }
         boolean ChekConfirmation(String var){//функция проверки корректности
-            if(var.equals("yes") | var.equals("no")){
+            if("yes".equals(var) | "no".equals(var)){
             return true;
             } else{
                 System.out.print("invalid expression, please try again << ");

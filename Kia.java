@@ -6,7 +6,7 @@ public class Kia {
         Processing process = new ConsoleApl();
         ChekFunction ChekStatemen = new ChekFunction();
 
-        while (Variable.consumerAnswer.equals(Variable.yes)) { // подтверждение yes/no
+        while (Variable.yes.equals(Variable.consumerAnswer)) { // подтверждение yes/no
                 process.start();
                 boolean answer = ChekStatemen.Chek(Variable.generation);
                 if(answer){
